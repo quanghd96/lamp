@@ -6,22 +6,22 @@ department varchar(15),
 email  varchar(50)
 );
 INSERT INTO employees (first_name, last_name, department, email) 
-VALUES ('Lorenz', 'Vanthillo', 'IT', 'lvthillo@mail.com');
+VALUES ('a', 'Vanthillo', 'IT', 'lvthillo@mail.com');
 INSERT INTO employees (first_name, last_name, department, email) 
 VALUES ('Lorenz', 'Vanthillo', 'IT', 'lvthillo@mail.com');
 INSERT INTO employees (first_name, last_name, department, email) 
-VALUES ('Lorenz', 'Vanthillo', 'IT', 'lvthillo@mail.com');
+VALUES ('b', 'Vanthillo', 'IT', 'lvthillo@mail.com');
 INSERT INTO employees (first_name, last_name, department, email) 
-VALUES ('Lorenz', 'Vanthillo', 'IT', 'lvthillo@mail.com');
+VALUES ('c', 'Vanthillo', 'IT', 'lvthillo@mail.com');
 INSERT INTO employees (first_name, last_name, department, email) 
-VALUES ('Lorenz', 'Vanthillo', 'IT', 'lvthillo@mail.com');
+VALUES ('d', 'Vanthillo', 'IT', 'lvthillo@mail.com');
 INSERT INTO employees (first_name, last_name, department, email) 
-VALUES ('Lorenz', 'Vanthillo', 'IT', 'lvthillo@mail.com');
+VALUES ('e', 'Vanthillo', 'IT', 'lvthillo@mail.com');
 INSERT INTO employees (first_name, last_name, department, email) 
-VALUES ('Lorenz', 'Vanthillo', 'IT', 'lvthillo@mail.com');
+VALUES ('f', 'Vanthillo', 'IT', 'lvthillo@mail.com');
 INSERT INTO employees (first_name, last_name, department, email) 
-VALUES ('Lorenz', 'Vanthillo', 'IT', 'lvthillo@mail.com');
+VALUES ('g', 'Vanthillo', 'IT', 'lvthillo@mail.com');
 INSERT INTO employees (first_name, last_name, department, email) 
-VALUES ('Lorenz', 'Vanthillo', 'IT', 'lvthillo@mail.com');
+VALUES ('h', 'Vanthillo', 'IT', 'lvthillo@mail.com');
 INSERT INTO employees (first_name, last_name, department, email) 
-VALUES ('Lorenz', 'Vanthillo', 'IT', 'lvthillo@mail.com');
+VALUES ('i', 'Vanthillo', 'IT', 'lvthillo@mail.com');

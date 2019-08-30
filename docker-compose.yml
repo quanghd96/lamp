@@ -31,7 +31,6 @@ services:
     container_name: "mysql"
     restart: "always"
     volumes:
-      - ./data/mysql:/var/lib/mysql
       - ./logs/mysql:/var/log/mysql
       - ./dump/CreateTable.sql:/docker-entrypoint-initdb.d/dump.sql
     networks:
