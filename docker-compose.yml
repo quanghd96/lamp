@@ -33,7 +33,8 @@ services:
     container_name: "mysql"
     restart: "always"
     volumes:
-      - ./logs/mysql:/var/log/mysql
+      # - ./logs/mysql:/var/log/mysql
+      - ./config/mysql/my.cnf:/etc/mysql/my.cnf
       - ./dump/CreateTable.sql:/docker-entrypoint-initdb.d/dump.sql
     networks:
       - backend
