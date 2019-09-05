@@ -11,6 +11,7 @@ services:
     volumes:
       - ./www:/var/www/html
       - ./config/php/php.ini:/usr/local/etc/php/php.ini
+      # - ./config/php/php-ok.ini:/usr/local/etc/php/php-ok.ini
   apache:
     build:
       context: ./bin/apache
@@ -23,8 +24,9 @@ services:
       - backend
     volumes:
       - ./www:/var/www/html
-      - ./config/vhosts:/etc/apache2/sites-enabled
-      - ./logs/apache2:/var/log/apache2
+      - ./config/vhosts/httpd.conf:/usr/local/apache2/conf/httpd.conf
+      # - ./config/vhosts:/etc/apache2/sites-enabled
+      # - ./logs/apache2:/var/log/apache2
   mysql:
     build:
       context: ./bin/mysql
