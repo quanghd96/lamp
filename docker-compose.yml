@@ -22,9 +22,6 @@ services:
       - backend
     volumes:
       - ./www:/var/www/html
-      - ./config/vhosts/httpd.conf:/usr/local/apache2/conf/httpd.conf
-      # - ./config/vhosts:/etc/apache2/sites-enabled
-      # - ./logs/apache2:/var/log/apache2
   mysql:
     build:
       context: ./bin/mysql
