@@ -10,3 +10,5 @@ ADD checking.sh /
 RUN chmod +x /checking.sh
 
 RUN docker-php-ext-install mysqli
+
+WORKDIR /usr/local/etc/php
