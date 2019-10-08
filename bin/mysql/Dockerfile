@@ -7,3 +7,5 @@ ADD *.cnf /etc/mysql/
 
 ADD *.sh /
 RUN chmod +x /*.sh
+
+WORKDIR /etc/mysql
