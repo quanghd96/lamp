@@ -4,7 +4,6 @@ services:
   php:
     build:
       context: ./bin/php
-    container_name: "php"
     restart: "always"
     networks:
       - backend
@@ -13,7 +12,6 @@ services:
   apache:
     build:
       context: ./bin/apache
-    container_name: "apache"
     restart: "always"
     ports:
       - "8099:80"
@@ -25,7 +23,6 @@ services:
   mysql:
     build:
       context: ./bin/mysql
-    container_name: "mysql"
     restart: "always"
     volumes:
       - ./dump/CreateTable.sql:/docker-entrypoint-initdb.d/dump.sql
