@@ -1,12 +1,11 @@
-FROM docker:latest
+FROM docker
 
-RUN apk add docker-compose
+RUN apk update
+RUN apk add docker-compose git
 
-USER root
+RUN git clone https://github.com/quanghd96/lamp-docker-compose.git lamp
 
-ADD . /lpic
-RUN chmod +x /lpic/run.sh
+WORKDIR /lamp
 
-EXPOSE 8888:8099
-
-ENTRYPOINT ["/bin/sh","/lpic/run.sh"]
+# ENTRYPOINT [ "/usr/bin/docker-compose up -d"]
+ENTRYPOINT ["/bin/sh", "./run.sh"]
