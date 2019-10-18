@@ -4,38 +4,38 @@ services:
   php:
     build:
       context: ./bin/php
-    container_name: "php"
+    container_name: "${name}_php"
     restart: "always"
     networks:
-      - backend
+      - ${name}_backend
     volumes:
       - ./www:/var/www/html
   apache:
     build:
       context: ./bin/apache
-    container_name: "apache"
+    container_name: "${name}_apache"
     restart: "always"
     ports:
       - "8099:80"
     networks:
-      - frontend
-      - backend
+      - ${name}_frontend
+      - ${name}_backend
     volumes:
       - ./www:/var/www/html
   mysql:
     build:
       context: ./bin/mysql
-    container_name: "mysql"
+    container_name: "${name}_mysql"
     restart: "always"
     volumes:
       - ./dump/CreateTable.sql:/docker-entrypoint-initdb.d/dump.sql
     networks:
-      - backend
+      - ${name}_backend
     environment:
       MYSQL_ROOT_PASSWORD: tiger
       MYSQL_DATABASE: docker
       MYSQL_USER: docker
       MYSQL_PASSWORD: docker
 networks:
-  backend:
-  frontend:
+  ${name}_backend:
+  ${name}_frontend:
