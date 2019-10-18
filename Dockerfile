@@ -3,6 +3,9 @@ ARG name
 ARG port=8099
 ENV name=${name}
 ENV port=${port}
+
+RUN echo "Build image with param: (${name} - ${port})"
+
 RUN apk update
 RUN apk add docker-compose git
 
