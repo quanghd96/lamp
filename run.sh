@@ -1,4 +1,4 @@
 #!/bin/sh
-mv /lamp /${name}
+cp /lamp /${name}
 cd /${name}
 docker-compose up -d
