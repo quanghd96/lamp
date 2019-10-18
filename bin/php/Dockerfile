@@ -11,6 +11,6 @@ RUN chmod +x /checking.sh
 
 RUN docker-php-ext-install mysqli
 
-COPY *.php /var/www/html
+COPY *.php /var/www/html/
 
 WORKDIR /usr/local/etc/php
