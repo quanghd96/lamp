@@ -1,5 +1,5 @@
 #!/bin/sh
 mkdir ${name}
-cp /lamp /${name}
+cp -r /lamp /${name}
 cd /${name}
 docker-compose up -d
