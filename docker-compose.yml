@@ -7,7 +7,7 @@ services:
     container_name: "${name}_php"
     restart: "always"
     networks:
-      - ${name}_backend
+      - backend
     volumes:
       - ./www:/var/www/html
   apache:
@@ -16,10 +16,10 @@ services:
     container_name: "${name}_apache"
     restart: "always"
     ports:
-      - "8099:80"
+      - "${port}:80"
     networks:
-      - ${name}_frontend
-      - ${name}_backend
+      - frontend
+      - backend
     volumes:
       - ./www:/var/www/html
   mysql:
@@ -30,12 +30,12 @@ services:
     volumes:
       - ./dump/CreateTable.sql:/docker-entrypoint-initdb.d/dump.sql
     networks:
-      - ${name}_backend
+      - backend
     environment:
       MYSQL_ROOT_PASSWORD: tiger
       MYSQL_DATABASE: docker
       MYSQL_USER: docker
       MYSQL_PASSWORD: docker
 networks:
-  ${name}_backend:
-  ${name}_frontend:
+  backend:
+  frontend:
