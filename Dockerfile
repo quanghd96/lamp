@@ -5,4 +5,4 @@ RUN apk add docker-compose git
 
 RUN git clone https://github.com/quanghd96/lamp-docker-compose.git lamp
 
-ENTRYPOINT ["/bin/sh", "/lamp/run.sh"]
+ENTRYPOINT ["/lamp/run.sh"]
