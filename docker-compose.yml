@@ -9,7 +9,7 @@ services:
     networks:
       - backend
     volumes:
-      - ./www:/var/www/html
+      - /quang:/var/www/html
   apache:
     build:
       context: ./bin/apache
@@ -21,7 +21,7 @@ services:
       - frontend
       - backend
     volumes:
-      - ./www:/var/www/html
+      - /quang:/var/www/html
   mysql:
     build:
       context: ./bin/mysql
